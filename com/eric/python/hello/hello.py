@@ -32,3 +32,4 @@ while age>0:
     age-=1
 else:
     print("年龄判断完成，未出现异常")
+
