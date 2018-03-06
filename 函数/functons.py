@@ -70,3 +70,17 @@ def regist(name, age, country='中国'):
 
 status = regist('tom', 20)
 print(status)
+
+#全局变量
+name = 'tom'
+
+def change_name():
+    # 此处name是函数内声明的局部变量，而不是对外部name的赋值操作
+    # global name
+    name = 'eric'
+    print(name)
+
+change_name() # 此处打印eric
+
+print(name) # 此处打印tom
+
