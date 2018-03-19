@@ -17,6 +17,19 @@ print(dir())
 # 如果指定了变量名，则打印该变量的内部变量
 print(dir(a))
 
+# 查看当前运行程序里的所有变量及其值（dir()只会查找变量名）
+print(vars())
+
+# 获取全局变量集合（类似vars()）
+print(globals())
+
+# 打印局部变量
+def ff():
+    n=3
+    print(locals())
+
+ff() # {'n': 3}
+
 # slice 系统内置的切片方法
 s = slice(1, 5, 2)  # 从索引1截取到索引5，步长为2
 b = a[s]
@@ -59,3 +72,19 @@ print(list(enum))# [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, -1)]
 # 列表求和
 total=sum(a)
 print("total=",total)
+
+
+# 判断某个变量是否可以调用（是否为函数）
+cal=callable(a)
+print(cal) # False
+
+def f():
+    pass
+cal=callable(f)
+print(cal) # True
+
+# 获取小数位数(四舍五入)
+n=1.234567
+print(round(n)) # 1
+print(round(n,2)) #1.23
+print(round(n,4)) #1.2346

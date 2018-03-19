@@ -10,3 +10,10 @@ print(list(mp))
 fl=filter(lambda x:x%2!=0,ls)
 
 print(list(fl))
+
+#列表一一对应
+ls2=['a','b','c']
+
+zip=zip(ls,ls2)
+
+print(list(zip)) # [(1, 'a'), (2, 'b'), (3, 'c')]
