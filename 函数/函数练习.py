@@ -30,13 +30,12 @@ def sucess():
     show_employs()
 
 
-    print('选择0退出系统，或选择序号修改员工信息')
     #输入要修改的员工序号
     while True:
-        index = input("请选择员工序号：")
-        if (isinstance(index, int)):
+        index = input("选择q退出系统，或选择序号修改员工信息：")
+        if (index.isdigit()):
             index = int(index)
-        if(-1==index):
+        if('q'==index):
             # 退出
             print("系统已退出")
             break
@@ -52,6 +51,17 @@ def select_employ(position):
     for index,em in enumerate(employe_list):
         if index==position:
             print(index,em)
+            while True:
+                index=input("请输入要修改的栏位（从0到4）,或q退出修改：")
+                if(index.isdigit()):
+                    index=int(index)
+                if('q'==index):
+                    break
+                else:
+                    print("当前值为：",em[index])
+                    new_value=input("请输入新值：")
+                    em[index]=new_value
+                    print(em)
 
 while loginCount < 3:
 

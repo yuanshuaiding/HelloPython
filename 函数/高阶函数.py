@@ -4,12 +4,14 @@
 # 2. retrun另一个函数作为返回值
 import math
 
-
+#普通函数
 def abc(x):
     return x**2
+#普通函数
 def bcd(x):
     return math.sqrt(x)
 
+#高阶函数（入参有函数变量）
 def calc(x,y,f):
     return f(x)+f(y)
 
