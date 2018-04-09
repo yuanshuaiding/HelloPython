@@ -90,4 +90,4 @@ f.close()
 f_new.close()
 
 import os
-os.rename(f_bak,f_src)
+os.replace(f_bak,f_src)
