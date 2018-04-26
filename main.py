@@ -1,1 +1,1 @@
-from 常用模块.module1 import views
+from 第三方模块导入.module1 import views
