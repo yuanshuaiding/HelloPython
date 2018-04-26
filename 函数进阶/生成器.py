@@ -85,8 +85,8 @@ print(g.send("hi"))  # 1
 
 for i in g:
     if i > 200:
+        #g.send('stop')  # 在生成器函数里接收到stop
         # 循环结束,则会停止对生成器的调用,即生成器函数终止
-        g.send('stop')  # 在生成器函数里接收到stop
-        # break
+        break
     else:
         print("(", i, ")", sep="", end='--->')

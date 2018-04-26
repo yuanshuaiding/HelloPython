@@ -89,5 +89,5 @@ for line in f:
 f.close()
 f_new.close()
 
-import os
-os.replace(f_bak,f_src)
+from os import replace
+replace(f_bak,f_src)

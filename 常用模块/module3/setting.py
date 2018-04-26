@@ -1,0 +1,1 @@
+print("加载setting")
